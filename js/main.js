@@ -83,7 +83,7 @@ const text2 = new Blotter.Text('스르륵', {
   fill: "#3000f2",
   paddingTop: 50,
   paddingBottom: 100,
-  weight: 300
+  weight: 100
 });
 
 // Use a material
