@@ -53,8 +53,6 @@ const text = new Blotter.Text('울렁울렁', {
   fill: "#FFFFFF",
   paddingTop: 100,
   paddingBottom: 100,
-  paddingRight: 100,
-  paddingLeft: 100,
   weight: 800
 });
 
