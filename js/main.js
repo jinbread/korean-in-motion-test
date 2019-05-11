@@ -50,9 +50,9 @@ anime.timeline({loop: true})
 const text = new Blotter.Text('울렁울렁', {
 	family: "Arial",
   size: 80,
-  fill: "#FFFFFF",
-  paddingTop: 100,
-  paddingBottom: 100,
+  fill: "#e81594",
+  paddingTop: 50,
+  paddingBottom: 50,
   weight: 800
 });
 
@@ -73,3 +73,33 @@ let blotter = new Blotter(material, {
 let scope = blotter.forText(text);
 let elem = document.getElementById('blotter-container');
 scope.appendTo(elem);
+
+
+
+// Define text style
+const text2 = new Blotter.Text('스르륵', {
+	family: "Arial",
+  size: 60,
+  fill: "#3000f2",
+  paddingTop: 50,
+  paddingBottom: 100,
+  weight: 300
+});
+
+// Use a material
+// https://blotter.js.org/#/materials
+let material2 = new Blotter.SlidingDoorMaterial();
+
+// Set material opts
+// material2.uniforms.uSpeed.value = 0.3;
+// material2.uniforms.uVolatility.value = 0.10;
+// material2.uniforms.uSeed.value = 0.1;
+
+let blotter2 = new Blotter(material2, {
+  texts: text2
+});
+
+// Apply to element
+let scope2 = blotter2.forText(text2);
+let elem2 = document.getElementById('blotter-sliding');
+scope2.appendTo(elem2);
