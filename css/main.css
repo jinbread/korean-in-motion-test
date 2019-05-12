@@ -51,7 +51,7 @@ p {
     margin-top: 50px;
     margin-bottom: 50px;
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: rgb(41, 252, 46);
   }
   
@@ -82,7 +82,13 @@ p {
   }
 
   .svg-demo {
+    display: inline-block;
+
     /* margin-top: 50px; */
     /* margin-bottom: 50px; */
     /* height: 400px; */
+  }
+
+  .svg-path {
+    transform-origin: 50% 50%;
   }

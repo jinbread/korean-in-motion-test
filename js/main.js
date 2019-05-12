@@ -102,7 +102,7 @@ const text2 = new Blotter.Text('스르륵', {
   fill: "#3000f2",
   paddingTop: 50,
   paddingBottom: 100,
-  weight: 100
+  weight: 800
 });
 
 // Use a material
@@ -134,39 +134,57 @@ scope2.appendTo(elem2);
 
 var anTl = anime.timeline({
   easing: 'easeOutExpo',
-  duration: 1000,
+  duration: 2000,
   loop: true,  
 })
 
+// anTl
+// .add({
+//   targets: '#Shape',
+//   translateX: '50',
+//   duration: 1000,
+//   delay: anime.stagger(100)
+// })
+// .add({
+//   targets: '#Shape',
+//   translateY: '50',
+//   duration: 1000,
+//   delay: anime.stagger(100)
+// })
+// .add({
+//   targets: '#Shape',
+//   translateX: '-50',
+//   duration: 1000,
+//   delay: anime.stagger(100)
+// })
+// .add({
+//   targets: '#Shape',
+//   translateY: '-50',
+//   duration: 1000,
+//   delay: anime.stagger(100)
+// })
+// .add({
+//   targets: '#Shape',
+//   translateX: '0',
+//   translateY: '0',
+//   duration: 1000,
+//   delay: anime.stagger(100)
+// })
+
 anTl
 .add({
-  targets: '#Shape',
-  translateX: '50',
-  duration: 1000,
-  delay: anime.stagger(100)
+  targets: '.svg-path',
+  translateZ: 0,
+  scale: [0, 1],
+  opacity: [0, 1],
+  rotate: '3turn',
+  delay: anime.stagger(100, {direction: 'reverse'})
 })
 .add({
-  targets: '#Shape',
-  translateY: '50',
-  duration: 1000,
-  delay: anime.stagger(100)
-})
-.add({
-  targets: '#Shape',
-  translateX: '-50',
-  duration: 1000,
-  delay: anime.stagger(100)
-})
-.add({
-  targets: '#Shape',
-  translateY: '-50',
-  duration: 1000,
-  delay: anime.stagger(100)
-})
-.add({
-  targets: '#Shape',
-  translateX: '0',
-  translateY: '0',
-  duration: 1000,
+  targets: '.svg-path',
+  translateZ: 0,
+  scale: [1, 0.5],
+  opacity: [1, 0],
+  rotate: '1turn',
   delay: anime.stagger(100)
 })
