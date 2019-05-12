@@ -99,7 +99,7 @@ scope.appendTo(elem);
 const text2 = new Blotter.Text('스르륵', {
 	family: "Arial",
   size: 60,
-  fill: "#3000f2",
+  fill: "rgb(240, 88, 144)",
   paddingTop: 50,
   paddingBottom: 100,
   weight: 800
