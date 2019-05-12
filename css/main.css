@@ -80,3 +80,9 @@ p {
     margin-top: 50px;
     margin-bottom: 50px;
   }
+
+  .svg-demo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* height: 400px; */
+  }

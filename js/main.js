@@ -122,3 +122,51 @@ let blotter2 = new Blotter(material2, {
 let scope2 = blotter2.forText(text2);
 let elem2 = document.getElementById('blotter-sliding');
 scope2.appendTo(elem2);
+
+
+// anime({
+//   targets: '#Shape',
+//   translateX: '40',
+//   duration: 3400,
+//   loop: true,
+//   delay: anime.stagger(100)
+// })
+
+var anTl = anime.timeline({
+  easing: 'easeOutExpo',
+  duration: 1000,
+  loop: true,  
+})
+
+anTl
+.add({
+  targets: '#Shape',
+  translateX: '50',
+  duration: 1000,
+  delay: anime.stagger(100)
+})
+.add({
+  targets: '#Shape',
+  translateY: '50',
+  duration: 1000,
+  delay: anime.stagger(100)
+})
+.add({
+  targets: '#Shape',
+  translateX: '-50',
+  duration: 1000,
+  delay: anime.stagger(100)
+})
+.add({
+  targets: '#Shape',
+  translateY: '-50',
+  duration: 1000,
+  delay: anime.stagger(100)
+})
+.add({
+  targets: '#Shape',
+  translateX: '0',
+  translateY: '0',
+  duration: 1000,
+  delay: anime.stagger(100)
+})
