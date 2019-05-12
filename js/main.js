@@ -6,7 +6,7 @@ $('.ml2').each(function(){
   anime.timeline({loop: true})
     .add({
       targets: '.ml2 .letter',
-      scale: [20,1],
+      scale: [4,1],
       opacity: [0,1],
       translateZ: 0,
       easing: "easeOutExpo",

@@ -81,9 +81,19 @@ p {
     margin-bottom: 50px;
   }
 
+
+  .svg-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
   .svg-demo {
     display: inline-block;
-
+    border: 2px solid white;    
+    padding: 0;
+    margin: 0;
+    height: 350px;
+    /* clip-path: inset(40px 40px 40px 40px); */
+    
     /* margin-top: 50px; */
     /* margin-bottom: 50px; */
     /* height: 400px; */
