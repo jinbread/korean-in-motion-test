@@ -88,13 +88,25 @@ p {
 
 .svg-demo {
     display: inline-block;
-    border: 6px solid rgb(251, 0, 176);    
     padding: 0;
     margin: 0;
     height: 300px;
+}
+
+.a {
+    border: 6px solid rgb(251, 0, 176);    
     background-color: rgb(0, 0, 255);
 }
 
+.b{
+    border: 6px solid white;    
+    background-color: #FEE600;
+}
+
 .svg-path {
+    transform-origin: 50% 50%;
+}
+
+.svg-b {
     transform-origin: 50% 50%;
 }

@@ -102,13 +102,13 @@ scope2.appendTo(elem2);
 
 
 
-var anTl = anime.timeline({
+var aTl = anime.timeline({
   easing: 'easeOutExpo',
   duration: 2000,
   loop: true,  
 })
 
-anTl
+aTl
 .add({
   targets: '.svg-path',
   translateZ: 0,
@@ -124,4 +124,25 @@ anTl
   opacity: [1, 0],
   rotate: '1turn',
   delay: anime.stagger(100)
+})
+
+
+
+
+var bTl = anime.timeline({
+  easing: 'easeOutExpo',
+  duration: 2000,
+  loop: true,  
+})
+
+bTl
+.add({
+  targets: '.svg-b',
+  rotate: '3turn',
+  delay: anime.stagger(100, {direction: 'reverse'})
+})
+.add({
+  targets: '.svg-b',
+  rotate: '3turn',
+  delay: anime.stagger(100, {direction: 'reverse'})
 })
