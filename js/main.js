@@ -139,7 +139,8 @@ bTl
   targets: '.svg-b',
   rotate: '1turn',
   duration: 1200,
-  delay: anime.stagger(120)
+  easing: 'easeOutExpo',
+  delay: anime.stagger(120, {direction: 'reverse'})
 })
 .add({
   targets: '.svg-b',
