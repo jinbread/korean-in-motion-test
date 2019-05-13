@@ -120,6 +120,11 @@ p {
     background-color: #FEE600;
 }
 
+.c{
+    border: 6px solid white;    
+    background-color: #222222;
+}
+
 .svg-path {
     transform-origin: 50% 50%;
 }
