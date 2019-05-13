@@ -130,19 +130,27 @@ aTl
 
 
 var bTl = anime.timeline({
-  easing: 'easeOutExpo',
-  duration: 2000,
+  easing: 'easeInOutExpo',
   loop: true,  
 })
 
 bTl
 .add({
   targets: '.svg-b',
-  rotate: '3turn',
-  delay: anime.stagger(100, {direction: 'reverse'})
+  rotate: '1turn',
+  duration: 1200,
+  delay: anime.stagger(120)
 })
 .add({
   targets: '.svg-b',
-  rotate: '3turn',
-  delay: anime.stagger(100, {direction: 'reverse'})
+  scale: 10,
+  duration: 300,
+  opacity: 0,
+})
+.add({
+  targets: '.svg-b',
+  scale: [.5, 1],
+  opacity: [0, 1],
+  duration: 100,
+  easing: "spring(1, 100, 10, 10)"
 })
