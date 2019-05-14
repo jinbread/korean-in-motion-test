@@ -41,7 +41,7 @@ h4 {
     opacity: .9;
     font-weight: 800;
     font-size: 1.4em;
-    /* letter-spacing: -.5px; */
+    letter-spacing: -.02em;
 }
 
 h6 {
