@@ -1,12 +1,23 @@
 @font-face {
-    font-family: "Gordita";
+    font-family: "Gordita-Bold";
+    src: url('/font/gordita-bold.eot'); /* IE9 Compat Modes */
+    src: url('/font/gordita-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/font/gordita-bold.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/font/gordita-bold.woff') format('woff'), /* Pretty Modern Browsers */
+         url('/font/gordita-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('/font/gordita-bold.svg#FontName') format('svg'); /* Legacy iOS */
+    }
+
+@font-face {
+    font-family: "Gordita-Medium";
     src: url('/font/gordita-medium.eot'); /* IE9 Compat Modes */
-    src: url('/font/gordita-medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    src: url('/font/gordita-medium.eot') format('embedded-opentype'), /* IE6-IE8 */
          url('/font/gordita-medium.woff2') format('woff2'), /* Super Modern Browsers */
          url('/font/gordita-medium.woff') format('woff'), /* Pretty Modern Browsers */
          url('/font/gordita-medium.ttf')  format('truetype'), /* Safari, Android, iOS */
          url('/font/gordita-medium.svg#FontName') format('svg'); /* Legacy iOS */
     }
+
 
 body {
   /* position: relative; */
@@ -25,22 +36,24 @@ h1 {
 h4 {
     margin: 0;
     padding: 0;
-    font-family: Gordita, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Gordita-Bold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
     opacity: .9;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 1.4em;
+    /* letter-spacing: -.5px; */
 }
 
 h6 {
     margin-top: 2px;
     margin-bottom: 0px;
     padding: 0;
-    font-family: Gordita, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Gordita-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #fff;
     opacity: .4;
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 0.9em;
+    
 }
 
 p {
