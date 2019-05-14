@@ -199,8 +199,16 @@ canvas {
     background-color: #292929;
 }
 
+.svg-path-a {
+    transform-origin: 50% 50%;
+}
+
 .svg-path {
     transform-origin: 50% 50%;
+}
+
+svg {
+    border-radius: 8px;
 }
 
 .svg-b {

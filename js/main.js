@@ -1,12 +1,10 @@
-
-
-var aTl = anime.timeline({
+var randomTl = anime.timeline({
   easing: 'easeOutExpo',
-  duration: 2000,
+  // duration: 1200,
   loop: true,  
 })
 
-aTl
+randomTl
 .add({
   targets: '.svg-path',
   translateZ: 0,
@@ -23,6 +21,32 @@ aTl
   rotate: '1turn',
   delay: anime.stagger(100)
 })
+
+
+var aTl = anime.timeline({
+  easing: 'easeOutExpo',
+  // duration: 1200,
+  loop: true,  
+})
+
+aTl
+.add({
+  targets: '.svg-path-a',
+  translateZ: 0,
+  scale: [0, 1],
+  opacity: [0, 1],
+  rotate: '3turn',
+  delay: anime.stagger(100, {direction: 'reverse'})
+})
+.add({
+  targets: '.svg-path-a',
+  translateZ: 0,
+  scale: [1, 0.5],
+  opacity: [1, 0],
+  rotate: '1turn',
+  delay: anime.stagger(100)
+})
+
 
 
 
