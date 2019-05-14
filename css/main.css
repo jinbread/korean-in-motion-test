@@ -125,6 +125,7 @@ p {
     padding: 0;
     margin: 25px;
     height: 300px;
+    border-radius: 8px;
 }
 
 .a {
@@ -139,12 +140,12 @@ p {
 
 .c{
     /* border: 6px solid #555;     */
-    background-color: #222222;
+    background-color: #292929;
 }
 
 .d{
     /* border: 6px solid #555;     */
-    background-color: #222;
+    background-color: #292929;
 }
 
 .svg-path {
