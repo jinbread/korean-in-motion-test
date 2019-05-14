@@ -297,42 +297,53 @@ function draw() {
     pop();
   }
 
-  drawLeftTopLine(70, 50);
-  drawLeftTopLine(70, 130);
-  drawLeftTopLine(110, 170);
+  drawLeftTopLine(50, 50);
+  drawLeftTopLine(50, 130);
+  drawLeftTopLine(90, 170);
 
-  drawRightTopLine(190, 90);
-  drawRightTopLine(230, 50);
-  drawRightTopLine(230, 210);
+  drawRightTopLine(210, 90);
+  drawRightTopLine(250, 50);
+  drawRightTopLine(250, 210);
 
-  drawLeftBottomLine(70, 90);
-  drawLeftBottomLine(110, 210);
-  drawLeftBottomLine(70, 250);
+  drawLeftBottomLine(50, 90);
+  drawLeftBottomLine(90, 210);
+  drawLeftBottomLine(50, 250);
 
-  drawRightBottomLine(190, 130);
-  drawRightBottomLine(230, 170);
-  drawRightBottomLine(230, 250);
+  drawRightBottomLine(210, 130);
+  drawRightBottomLine(250, 170);
+  drawRightBottomLine(250, 250);
 
-  drawVerticalLine(230, 90);
-  drawVerticalLine(230, 130);
-  drawVerticalLine(70, 170);
-  drawVerticalLine(70, 210);
+  drawVerticalLine(250, 90);
+  drawVerticalLine(250, 130);
+  drawVerticalLine(50, 170);
+  drawVerticalLine(50, 210);
 
 
-  drawStraightLine(110, 50);
-  drawStraightLine(150, 50);
-  drawStraightLine(190, 50);
-  drawStraightLine(110, 90);
-  drawStraightLine(150, 90);
-  drawStraightLine(110, 130);
-  drawStraightLine(150, 130);
-  drawStraightLine(150, 170);
-  drawStraightLine(190, 170);
-  drawStraightLine(150, 210);
-  drawStraightLine(190, 210);
-  drawStraightLine(110, 250);
-  drawStraightLine(150, 250);
-  drawStraightLine(190, 250);
+  drawStraightLine(90, 50);
+  drawStraightLine(130, 50);
+  drawStraightLine(170, 50);
+  drawStraightLine(210, 50);
+
+  drawStraightLine(90, 90);
+  drawStraightLine(130, 90);
+  drawStraightLine(170, 90);
+
+  drawStraightLine(90, 130);
+  drawStraightLine(130, 130);
+  drawStraightLine(170, 130);
+
+  drawStraightLine(130, 170);
+  drawStraightLine(170, 170);
+  drawStraightLine(210, 170);
+
+  drawStraightLine(130, 210);
+  drawStraightLine(170, 210);
+  drawStraightLine(210, 210);
+
+  drawStraightLine(90, 250);
+  drawStraightLine(130, 250);
+  drawStraightLine(170, 250);
+  drawStraightLine(210, 250);
 
   if(xR >= 360) {
     xR = 0;
