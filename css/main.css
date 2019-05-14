@@ -154,6 +154,10 @@ p {
     justify-items: center; */
 }
 
+canvas {
+    border-radius: 8px;
+}
+
 .svg-demo {
     display: inline-block;
     padding: 0;
@@ -174,10 +178,23 @@ p {
 
 .c{
     /* border: 6px solid #555;     */
-    background-color: #292929;
+    background-color: rgb(255, 21, 21);
 }
 
 .d{
+    /* border: 6px solid #555;     */
+    /* margin: 25px; */
+    background-color: white;
+}
+
+
+#svg-content-d {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+}
+
+.z{
     /* border: 6px solid #555;     */
     background-color: #292929;
 }

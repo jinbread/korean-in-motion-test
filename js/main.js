@@ -55,6 +55,15 @@ bTl
 })
 
 
+anime({
+  targets: '.svg-d',
+  rotate: '1turn',
+  duration: 1200,
+  easing: 'easeOutExpo',
+  loop: true
+  // delay: anime.stagger(120, {direction: 'reverse'})
+})
+
 
 
 
@@ -160,3 +169,185 @@ bTl
 // let elem2 = document.getElementById('blotter-sliding');
 // scope2.appendTo(elem2);
 
+function setup(){
+  var canvas = createCanvas(300, 300);
+  canvas.parent('svg-content-d');
+  // background(255, 0, 200);
+
+  
+
+}
+
+
+var xR = 0;
+var yR = 0;
+var lineweight = 2;
+var stopCount = 0;
+
+function draw() {
+  background(255);
+  angleMode(DEGREES);
+  
+  function drawStraightLine(x, y) {
+    push();
+    translate(x, y);
+    rotate(xR);
+    strokeWeight(lineweight);
+    line(-20, 0, 0, 0);
+    translate();
+    pop();
+
+    push();
+    translate(x, y);
+    rotate(yR);
+    strokeWeight(lineweight);
+    line(0, 0, 20, 0);
+    translate();
+    pop();
+  }
+
+  function drawVerticalLine(x, y) {
+    push();
+    translate(x, y);
+    rotate(xR);
+    strokeWeight(lineweight);
+    line(0, -20, 0, 0);
+    translate();
+    pop();
+
+    push();
+    translate(x, y);
+    rotate(yR);
+    strokeWeight(lineweight);
+    line(0, 0, 0, 20);
+    translate();
+    pop();
+  }
+  function drawLeftTopLine(x, y){
+    push();
+    translate(x, y);
+    rotate(xR);
+    strokeWeight(lineweight);
+    line(0, 0, 20, 0);
+    translate();
+    pop();
+
+
+    push();
+    translate(x, y);
+    rotate(yR);
+    strokeWeight(lineweight);
+    line(0, 0, 0, 20);
+    translate();
+    pop();
+  }
+
+  function drawRightTopLine(x, y){
+    
+    push();
+    translate(x, y);
+    rotate(xR);
+    strokeWeight(lineweight);
+    line(-20, 0, 0, 0);
+    translate();
+    pop();
+    
+    push();
+    translate(x, y);
+    rotate(yR);
+    strokeWeight(lineweight);
+    line(0, 0, 0, 20);
+    translate();
+    pop();
+  }
+
+  function drawLeftBottomLine(x, y){
+    push();
+    translate(x, y);
+    rotate(xR);
+    strokeWeight(lineweight);
+    line(0, 0, 0, -20);
+    translate();
+    pop();
+
+    push();
+    translate(x, y);
+    rotate(yR);
+    strokeWeight(lineweight);
+    line(0, 0, 20, 0);
+    translate();
+    pop();
+  }
+
+  function drawRightBottomLine(x, y){
+    push();
+    translate(x, y);
+    rotate(xR);
+    strokeWeight(lineweight);
+    line(0, 0, 0, -20);
+    translate();
+    pop();
+
+    push();
+    translate(x, y);
+    rotate(yR);
+    strokeWeight(lineweight);
+    line(0, 0, -20, 0);
+    translate();
+    pop();
+  }
+
+  drawLeftTopLine(70, 50);
+  drawLeftTopLine(70, 130);
+  drawLeftTopLine(110, 170);
+
+  drawRightTopLine(190, 90);
+  drawRightTopLine(230, 50);
+  drawRightTopLine(230, 210);
+
+  drawLeftBottomLine(70, 90);
+  drawLeftBottomLine(110, 210);
+  drawLeftBottomLine(70, 250);
+
+  drawRightBottomLine(190, 130);
+  drawRightBottomLine(230, 170);
+  drawRightBottomLine(230, 250);
+
+  drawVerticalLine(230, 90);
+  drawVerticalLine(230, 130);
+  drawVerticalLine(70, 170);
+  drawVerticalLine(70, 210);
+
+
+  drawStraightLine(110, 50);
+  drawStraightLine(150, 50);
+  drawStraightLine(190, 50);
+  drawStraightLine(110, 90);
+  drawStraightLine(150, 90);
+  drawStraightLine(110, 130);
+  drawStraightLine(150, 130);
+  drawStraightLine(150, 170);
+  drawStraightLine(190, 170);
+  drawStraightLine(150, 210);
+  drawStraightLine(190, 210);
+  drawStraightLine(110, 250);
+  drawStraightLine(150, 250);
+  drawStraightLine(190, 250);
+
+  if(xR >= 360) {
+    xR = 0;
+    yR = 0;
+    // setTimeout(3000);
+    // sleep();
+  } else {
+    xR = xR + 0.5;
+    yR = yR + 2;
+  }
+
+  
+  // delay(1000);
+  // rotate(mouseX);
+  // line(0, 0, 20, 0)
+
+  // line(30, 50, 70, 50);
+}
