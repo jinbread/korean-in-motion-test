@@ -142,3 +142,8 @@ p {
 .svg-b {
     transform-origin: 50% 50%;
 }
+
+.footer {
+    margin-top: 50px;
+    height: 100px;
+}
