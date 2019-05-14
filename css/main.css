@@ -126,8 +126,13 @@ p {
 }
 
 .c{
-    border: 6px solid white;    
+    border: 6px solid #555;    
     background-color: #222222;
+}
+
+.d{
+    border: 6px solid #555;    
+    background-color: #222;
 }
 
 .svg-path {
