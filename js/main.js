@@ -243,12 +243,13 @@ c2Tl
 c3Tl = anime.timeline({
   easing: 'easeInOutExpo',
   loop: true,  
+  
 })
 
 c3Tl
 .add({
   targets: '#korean-c',
-  scale: 2.5,
+  scale: [1.5, 2.5],
   rotate: 360,
   easing: 'steps(40)',
   duration: 12000,
@@ -256,7 +257,7 @@ c3Tl
 })
 .add({
   targets: '#korean-c',
-  scale: 1,
+  scale: [2.5, 1.5],
   rotate: 0,
   easing: 'steps(40)',
   duration: 12000,
