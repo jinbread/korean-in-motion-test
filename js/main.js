@@ -208,14 +208,19 @@ var yR = 0;
 var lineweight = 2;
 var stopCount = 0;
 
+var r1 = 0;
+var r2 = 0;
+
 function draw() {
   background(255);
   angleMode(DEGREES);
   
-  function drawStraightLine(x, y) {
+  
+
+  function drawStraightLine(x, y, a, b) {
     push();
     translate(x, y);
-    rotate(xR);
+    rotate(a);
     strokeWeight(lineweight);
     line(-20, 0, 0, 0);
     translate();
@@ -223,17 +228,20 @@ function draw() {
 
     push();
     translate(x, y);
-    rotate(yR);
+    rotate(b);
     strokeWeight(lineweight);
     line(0, 0, 20, 0);
     translate();
     pop();
+    
   }
 
-  function drawVerticalLine(x, y) {
+  
+
+  function drawVerticalLine(x, y, a, b) {
     push();
     translate(x, y);
-    rotate(xR);
+    rotate(a);
     strokeWeight(lineweight);
     line(0, -20, 0, 0);
     translate();
@@ -241,16 +249,16 @@ function draw() {
 
     push();
     translate(x, y);
-    rotate(yR);
+    rotate(b);
     strokeWeight(lineweight);
     line(0, 0, 0, 20);
     translate();
     pop();
   }
-  function drawLeftTopLine(x, y){
+  function drawLeftTopLine(x, y, a, b){
     push();
     translate(x, y);
-    rotate(xR);
+    rotate(a);
     strokeWeight(lineweight);
     line(0, 0, 20, 0);
     translate();
@@ -259,18 +267,18 @@ function draw() {
 
     push();
     translate(x, y);
-    rotate(yR);
+    rotate(b);
     strokeWeight(lineweight);
     line(0, 0, 0, 20);
     translate();
     pop();
   }
 
-  function drawRightTopLine(x, y){
+  function drawRightTopLine(x, y, a, b){
     
     push();
     translate(x, y);
-    rotate(xR);
+    rotate(a);
     strokeWeight(lineweight);
     line(-20, 0, 0, 0);
     translate();
@@ -278,17 +286,17 @@ function draw() {
     
     push();
     translate(x, y);
-    rotate(yR);
+    rotate(b);
     strokeWeight(lineweight);
     line(0, 0, 0, 20);
     translate();
     pop();
   }
 
-  function drawLeftBottomLine(x, y){
+  function drawLeftBottomLine(x, y, a, b){
     push();
     translate(x, y);
-    rotate(xR);
+    rotate(a);
     strokeWeight(lineweight);
     line(0, 0, 0, -20);
     translate();
@@ -296,17 +304,17 @@ function draw() {
 
     push();
     translate(x, y);
-    rotate(yR);
+    rotate(b);
     strokeWeight(lineweight);
     line(0, 0, 20, 0);
     translate();
     pop();
   }
 
-  function drawRightBottomLine(x, y){
+  function drawRightBottomLine(x, y, a ,b){
     push();
     translate(x, y);
-    rotate(xR);
+    rotate(a);
     strokeWeight(lineweight);
     line(0, 0, 0, -20);
     translate();
@@ -314,75 +322,62 @@ function draw() {
 
     push();
     translate(x, y);
-    rotate(yR);
+    rotate(b);
     strokeWeight(lineweight);
     line(0, 0, -20, 0);
     translate();
     pop();
   }
 
-  drawLeftTopLine(50, 50);
-  drawLeftTopLine(50, 130);
-  drawLeftTopLine(90, 170);
+  drawLeftTopLine(50, 50, xR, yR);
+  drawLeftTopLine(50, 130, xR, yR);
+  drawLeftTopLine(90, 170, xR, yR);
 
-  drawRightTopLine(210, 90);
-  drawRightTopLine(250, 50);
-  drawRightTopLine(250, 210);
+  drawRightTopLine(210, 90, xR, yR);
+  drawRightTopLine(250, 50, xR, yR);
+  drawRightTopLine(250, 210, xR, yR);
 
-  drawLeftBottomLine(50, 90);
-  drawLeftBottomLine(90, 210);
-  drawLeftBottomLine(50, 250);
+  drawLeftBottomLine(50, 90, xR, yR);
+  drawLeftBottomLine(90, 210, xR, yR);
+  drawLeftBottomLine(50, 250, xR, yR);
 
-  drawRightBottomLine(210, 130);
-  drawRightBottomLine(250, 170);
-  drawRightBottomLine(250, 250);
+  drawRightBottomLine(210, 130, xR, yR);
+  drawRightBottomLine(250, 170, xR, yR);
+  drawRightBottomLine(250, 250, xR, yR);
 
-  drawVerticalLine(250, 90);
-  drawVerticalLine(250, 130);
-  drawVerticalLine(50, 170);
-  drawVerticalLine(50, 210);
+  drawVerticalLine(250, 90, xR, yR);
+  drawVerticalLine(250, 130, xR, yR);
+  drawVerticalLine(50, 170, xR, yR);
+  drawVerticalLine(50, 210, xR, yR);
 
 
-  drawStraightLine(90, 50);
-  drawStraightLine(130, 50);
-  drawStraightLine(170, 50);
-  drawStraightLine(210, 50);
+  drawStraightLine(90, 50, xR, yR);
+  drawStraightLine(130, 50, xR, yR);
+  drawStraightLine(170, 50, xR, yR);
+  drawStraightLine(210, 50, xR, yR);
 
-  drawStraightLine(90, 90);
-  drawStraightLine(130, 90);
-  drawStraightLine(170, 90);
+  drawStraightLine(90, 90, xR, yR);
+  drawStraightLine(130, 90, xR, yR);
+  drawStraightLine(170, 90, xR, yR);
 
-  drawStraightLine(90, 130);
-  drawStraightLine(130, 130);
-  drawStraightLine(170, 130);
+  drawStraightLine(90, 130, xR, yR);
+  drawStraightLine(130, 130, xR, yR);
+  drawStraightLine(170, 130, xR, yR);
 
-  drawStraightLine(130, 170);
-  drawStraightLine(170, 170);
-  drawStraightLine(210, 170);
+  drawStraightLine(130, 170, xR, yR);
+  drawStraightLine(170, 170, xR, yR);
+  drawStraightLine(210, 170, xR, yR);
 
-  drawStraightLine(130, 210);
-  drawStraightLine(170, 210);
-  drawStraightLine(210, 210);
+  drawStraightLine(130, 210, xR, yR);
+  drawStraightLine(170, 210, xR, yR);
+  drawStraightLine(210, 210, xR, yR);
 
-  drawStraightLine(90, 250);
-  drawStraightLine(130, 250);
-  drawStraightLine(170, 250);
-  drawStraightLine(210, 250);
+  drawStraightLine(90, 250, xR, yR);
+  drawStraightLine(130, 250, xR, yR);
+  drawStraightLine(170, 250, xR, yR);
+  drawStraightLine(210, 250, xR, yR);
 
-  if(xR >= 360) {
-    xR = 0;
-    yR = 0;
-    // setTimeout(3000);
-    // sleep();
-  } else {
-    xR = xR + 0.5;
-    yR = yR + 2;
-  }
+  xR = xR + 1;
+  yR = yR + 1;
 
-  
-  // delay(1000);
-  // rotate(mouseX);
-  // line(0, 0, 20, 0)
-
-  // line(30, 50, 70, 50);
 }
