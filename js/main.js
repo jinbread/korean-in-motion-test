@@ -79,6 +79,277 @@ bTl
 })
 
 
+
+var cTl = anime.timeline({
+  easing: 'easeInOutExpo',
+  loop: true,  
+})
+
+cTl
+.add({
+  targets: ['#c-1-1', '#c-1-2', '#c-1-3'],
+  translateX: 10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-2-1', '#c-2-2', '#c-2-3'],
+  translateX: 10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-3-1', '#c-3-2', '#c-3-3'],
+  translateX: 10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-1-1', '#c-1-2', '#c-1-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-2-1', '#c-2-2', '#c-2-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-3-1', '#c-3-2', '#c-3-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-1-1', '#c-1-2', '#c-1-3'],
+  translateX: -10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-2-1', '#c-2-2', '#c-2-3'],
+  translateX: -10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-3-1', '#c-3-2', '#c-3-3'],
+  translateX: -10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-1-1', '#c-1-2', '#c-1-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-2-1', '#c-2-2', '#c-2-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-3-1', '#c-3-2', '#c-3-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+
+var c2Tl = anime.timeline({
+  easing: 'easeInOutExpo',
+  loop: true,  
+})
+
+c2Tl
+.add({
+  targets: ['#c-4-1', '#c-4-2', '#c-4-3'],
+  translateX: -10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-5-1', '#c-5-2', '#c-5-3'],
+  translateX: -10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-6-1', '#c-6-2', '#c-6-3'],
+  translateX: -10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-4-1', '#c-4-2', '#c-4-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-5-1', '#c-5-2', '#c-5-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-6-1', '#c-6-2', '#c-6-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-4-1', '#c-4-2', '#c-4-3'],
+  translateX: 10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-5-1', '#c-5-2', '#c-5-3'],
+  translateX: 10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-6-1', '#c-6-2', '#c-6-3'],
+  translateX: 10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-4-1', '#c-4-2', '#c-4-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-5-1', '#c-5-2', '#c-5-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-6-1', '#c-6-2', '#c-6-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+
+
+
+c3Tl = anime.timeline({
+  easing: 'easeInOutExpo',
+  loop: true,  
+})
+
+c3Tl
+.add({
+  targets: '#korean-c',
+  scale: 2.5,
+  rotate: 360,
+  easing: 'steps(40)',
+  duration: 12000,
+  // delay: 4000
+})
+.add({
+  targets: '#korean-c',
+  scale: 1,
+  rotate: 0,
+  easing: 'steps(40)',
+  duration: 12000,
+  delay: 4000
+})
+
+
+var c4Tl = anime.timeline({
+  easing: 'easeInOutExpo',
+  loop: true,  
+})
+
+c4Tl
+.add({
+  targets: ['#c-7-1', '#c-7-2', '#c-7-3'],
+  translateX: 10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-8-1', '#c-8-2', '#c-8-3'],
+  translateX: 10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-9-1', '#c-9-2', '#c-9-3'],
+  translateX: 10,
+  duration: 300,
+  easing: 'steps(1)',
+})
+.add({
+  targets: ['#c-7-1', '#c-7-2', '#c-7-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-8-1', '#c-8-2', '#c-8-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-9-1', '#c-9-2', '#c-9-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-7-1', '#c-7-2', '#c-7-3'],
+  translateX: -10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-8-1', '#c-8-2', '#c-8-3'],
+  translateX: -10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-9-1', '#c-9-2', '#c-9-3'],
+  translateX: -10,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-7-1', '#c-7-2', '#c-7-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-8-1', '#c-8-2', '#c-8-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+.add({
+  targets: ['#c-9-1', '#c-9-2', '#c-9-3'],
+  translateX: 0,
+  easing: 'steps(1)',
+  duration: 300,
+})
+
+
+
+
+
+
+
+
 anime({
   targets: '.svg-d',
   rotate: '1turn',

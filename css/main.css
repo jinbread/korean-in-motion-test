@@ -207,7 +207,7 @@ canvas {
     transform-origin: 50% 50%;
 }
 
-svg {
+.svg-frame {
     border-radius: 8px;
 }
 
@@ -217,4 +217,8 @@ svg {
 
 footer {
     margin-bottom: 50px;
+}
+
+#korean-c {
+    transform-origin: 50% 50%;
 }
