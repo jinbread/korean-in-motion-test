@@ -406,7 +406,6 @@ anime({
 
 
 
-
 anime({
   targets: '.svg-d',
   rotate: '1turn',
