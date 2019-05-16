@@ -187,6 +187,10 @@ canvas {
     background-color: white;
 }
 
+.h {
+    background-color: black;
+    rotate: 90;
+}
 
 #svg-content-d {
     display: inline-block;
@@ -220,5 +224,9 @@ footer {
 }
 
 #korean-c {
+    transform-origin: 50% 50%;
+}
+
+#alphabet-h {
     transform-origin: 50% 50%;
 }

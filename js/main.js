@@ -346,7 +346,63 @@ c4Tl
 
 
 
+hTl = anime.timeline({
+  easing: 'easeInOutExpo',
+  loop: true
+})
 
+var h1Path = anime.path('#h-1-1')
+var h2Path = anime.path('#h-2-1')
+
+h2Tl = anime.timeline({
+  easing: 'easeInOutExpo',
+  loop: true
+})
+
+
+anime({
+  targets: '#h-1-2',
+  translateX: h1Path('x'),
+  translateY: h1Path('y'),
+  rotate: h1Path('angle'),
+  easing: 'easeInOutExpo',
+  duration: 1500,
+  loop: true,
+  direction: 'alternate'
+})
+
+
+anime({
+  targets: '#h-2-2',
+  translateX: h2Path('x'),
+  translateY: h2Path('y'),
+  rotate: h2Path('angle'),
+  easing: 'easeInOutExpo',
+  duration: 3000,
+  loop: true,
+  direction: 'alternate',
+});
+
+
+anime({
+  targets: '#h-1-1',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutExpo',
+  duration: 1500,
+  delay: function(el, i) { return i * 250 },
+  direction: 'alternate',
+  loop: true
+})
+
+anime({
+  targets: '#h-2-1',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutExpo',
+  duration: 3000,
+  delay: function(el, i) { return i * 250 },
+  direction: 'alternate',
+  loop: true,
+})
 
 
 
