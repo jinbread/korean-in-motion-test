@@ -187,6 +187,12 @@ canvas {
     background-color: white;
 }
 
+.f{
+    /* border: 6px solid #555;     */
+    /* margin: 25px; */
+    background-color: white;
+}
+
 
 .h {
     background-color: black;
@@ -194,6 +200,12 @@ canvas {
 }
 
 #svg-content-d {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+}
+
+#svg-content-f {
     display: inline-block;
     height: 300px;
     width: 300px;
