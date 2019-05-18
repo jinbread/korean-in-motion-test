@@ -355,6 +355,27 @@ anime({
   // delay: anime.stagger(120, {direction: 'reverse'})
 })
 
+anime({
+  targets: '.alphabet-f',
+  scale: [
+    {value: 0, easing: 'easeInOutExpo', duration: 1500},
+    {value: 1, easing: 'easeOutCubic', duration: 2400}
+  ],
+  delay: anime.stagger(200, {grid: [10, 10], from: 'center'}),
+  loop: true,
+});
+
+anime({
+  targets: '.alphabet-fc',
+  // borderRadius: ['0%', '50%'],
+  scale: [
+    {value: 0, easing: 'easeInOutExpo', duration: 1500},
+    {value: 1, easing: 'spring(1, 100, 10, 0)', duration: 2400}
+  ],
+  delay: anime.stagger(200, {grid: [6, 8], from: 'center'}),
+  loop: true,
+});
+
 
 
 

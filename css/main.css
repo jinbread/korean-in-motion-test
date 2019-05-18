@@ -190,7 +190,7 @@ canvas {
 .f{
     /* border: 6px solid #555;     */
     /* margin: 25px; */
-    background-color: white;
+    /* background-color: white; */
 }
 
 
@@ -209,6 +209,11 @@ canvas {
     display: inline-block;
     height: 300px;
     width: 300px;
+    
+}
+
+.alphabet-fc {
+    transform-origin: 50% 50%;
 }
 
 #svg-content-h {
@@ -234,6 +239,10 @@ canvas {
 }
 
 .svg-b {
+    transform-origin: 50% 50%;
+}
+
+.alphabet-f {
     transform-origin: 50% 50%;
 }
 

@@ -62,3 +62,4 @@ function onFrame(event) {
     path.smooth();
     path2.smooth();
 }
+
