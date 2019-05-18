@@ -188,16 +188,19 @@ canvas {
 }
 
 .f{
-    /* border: 6px solid #555;     */
-    /* margin: 25px; */
-    /* background-color: white; */
+    background-color: #292929;
 }
 
+.g {
+    background-color: #292929;
+}
 
 .h {
     background-color: black;
     rotate: 90;
 }
+
+
 
 #svg-content-d {
     display: inline-block;
@@ -206,6 +209,13 @@ canvas {
 }
 
 #svg-content-f {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    
+}
+
+#svg-content-g {
     display: inline-block;
     height: 300px;
     width: 300px;
