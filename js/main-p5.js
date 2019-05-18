@@ -208,7 +208,10 @@ var sketchd = function(p) {
         // Update the position of the shape
       p.xpos = p.xpos + p.xspeed * p.xdirection;
       p.ypos = p.ypos + p.yspeed * p.ydirection;
-  
+      console.log(p.millis());
+      if (p.millis() % 10000 > 0 && p.millis() % 10000 < 200 ) {
+        p.background(66, 0, 247);
+      }
       // Test to see if the shape exceeds the boundaries of the screen
       // If it does, reverse its direction by multiplying by -1
       if (p.xpos > p.width - p.rad - (p.sWeight / 2) || p.xpos < 20) {
