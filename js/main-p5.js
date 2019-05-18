@@ -208,7 +208,7 @@ var sketchd = function(p) {
         // Update the position of the shape
       p.xpos = p.xpos + p.xspeed * p.xdirection;
       p.ypos = p.ypos + p.yspeed * p.ydirection;
-      console.log(p.millis());
+      // console.log(p.millis());
       if (p.millis() % 10000 > 0 && p.millis() % 10000 < 200 ) {
         p.background(66, 0, 247);
       }
@@ -241,4 +241,35 @@ var sketchd = function(p) {
   new p5(sketche, 'svg-content-e');
   
   
-  
+  var sketchx = function(p) {
+    p.x = 0;
+    
+    p.setup = function() {
+      p.createCanvas(300, 300, p.WEBGL)
+      p.perspective(Math.PI / 3.0, p.width / p.height, 0.1, 500)
+    }
+
+    p.draw = function() {
+      p.background(44, 44, 44);
+	
+    for(var i = 0; i < 10; i++){
+      p.push();
+      // p.rotateZ(p.frameCount * 0.01);
+      // p.rotateX(p.frameCount * 0.01);
+      p.translate(0, i*15 - 67.5, 0);
+      p.rotateY(p.x*i);
+      p.normalMaterial();
+      p.box(150, 15, 150);
+      p.pop();		
+    }
+
+    
+    if(p.mouseIsPressed) {
+      p.x = p.x+0.001;
+    } else {
+      p.x = p.x - 0.001;  	
+    }
+  }
+}
+
+new p5(sketchx, 'svg-content-x');
