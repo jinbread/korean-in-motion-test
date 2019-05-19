@@ -259,6 +259,7 @@ var sketchd = function(p) {
       p.translate(0, i*15 - 67.5, 0);
       p.rotateY(p.x*i);
       p.normalMaterial();
+      p.smooth();
       p.box(150, 15, 150);
       p.pop();		
     }
