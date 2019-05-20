@@ -192,7 +192,7 @@ canvas {
 }
 
 .g {
-    background-color: #292929;
+    background-color: #FFC803;
 }
 
 .h {
@@ -254,6 +254,10 @@ canvas {
 }
 
 .alphabet-f {
+    transform-origin: 50% 50%;
+}
+
+.alphabet-g {
     transform-origin: 50% 50%;
 }
 

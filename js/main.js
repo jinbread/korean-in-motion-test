@@ -376,6 +376,14 @@ anime({
   loop: true,
 });
 
+anime({
+  targets: '.alphabet-g',
+  rotateY: '10turn',
+  loop: true,
+  easing: 'easeInOutExpo',
+  duration: 3000,
+})
+
 
 
 
