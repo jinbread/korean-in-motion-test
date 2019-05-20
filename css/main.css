@@ -200,7 +200,13 @@ canvas {
     rotate: 90;
 }
 
+.w {
+    background-color: #00FF4E;
+}
 
+.y {
+    background-color: #292929;
+}
 
 
 #svg-content-d {
@@ -216,7 +222,7 @@ canvas {
     
 }
 
-#svg-content-g {
+#svg-content-y {
     display: inline-block;
     height: 300px;
     width: 300px;
@@ -265,6 +271,11 @@ canvas {
 
 .alphabet-gx {
     transform-origin: 50% 50%;
+}
+
+.alphabet-wa, .alphabet-wb, .alphabet-wc, .alphabet-wd {
+    transform-origin: 50% 50%;
+    
 }
 
 footer {

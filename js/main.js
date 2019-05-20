@@ -385,6 +385,76 @@ anime({
   delay: anime.stagger(100),
 })
 
+wTl = anime.timeline({
+  easing: 'easeOutExpo',
+  loop: true,  
+})
+
+wTl
+.add({
+  targets: '.alphabet-wb',
+  translateX: 46,
+  duration: 200,
+  easing: 'easeOutExpo',
+  // translateY: 46,
+  delay: 800
+})
+.add({
+  targets: '.alphabet-wa',
+  translateX: -46,
+  translateY: -46,
+  duration: 200,
+  easing: 'easeOutExpo',
+  delay: 200
+})
+.add({
+  targets: '.alphabet-wc',
+  // translateX: -46,
+  translateY: -46,
+  duration: 200,
+  easing: 'easeOutExpo',
+  delay: 200
+})
+.add({
+  targets: '.alphabet-wd',
+  translateX: -46,
+  translateY: 46,
+  duration: 200,
+  easing: 'easeOutExpo',
+  delay: 200
+})
+.add({
+  targets: '.alphabet-wa',
+  translateX: 0,
+  translateY: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  delay: 800
+})
+.add({
+  targets: '.alphabet-wd',
+  translateX: 0,
+  translateY: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  delay: 200
+})
+.add({
+  targets: '.alphabet-wb',
+  translateX: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  delay: 200
+  // translateY: 46,
+})
+.add({
+  targets: '.alphabet-wc',
+  // translateX: -46,
+  translateY: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  delay: 200
+})
 
 
 // // Wrap every letter in a span
