@@ -246,7 +246,8 @@ var sketchd = function(p) {
     
     p.setup = function() {
       p.createCanvas(300, 300, p.WEBGL)
-      p.perspective(Math.PI / 3.0, p.width / p.height, 0.1, 500)
+      p.ortho();
+
     }
 
     p.draw = function() {
