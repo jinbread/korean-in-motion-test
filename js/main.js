@@ -378,12 +378,12 @@ anime({
 
 anime({
   targets: '.alphabet-g',
-  rotateY: '10turn',
+  rotateY: '4turn',
   loop: true,
   easing: 'easeInOutExpo',
   duration: 3000,
+  delay: anime.stagger(100),
 })
-
 
 
 

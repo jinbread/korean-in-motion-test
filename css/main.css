@@ -261,6 +261,10 @@ canvas {
     transform-origin: 50% 50%;
 }
 
+.alphabet-gx {
+    transform-origin: 50% 50%;
+}
+
 footer {
     margin-bottom: 50px;
 }
