@@ -456,6 +456,45 @@ wTl
   delay: 200
 })
 
+var jTla = anime.timeline({
+  loop: true,
+  easing: "easeInOutExpo",
+})
+
+jTla
+.add({
+  targets: '.alphabet-j-left',
+  rotate: 109,
+  duration: 400
+})
+.add({
+  targets: '.alphabet-j-left',
+  rotate: 0,
+  duration: 400
+})
+
+var jTlb = anime.timeline({
+  loop: true,
+  easing: "easeInOutExpo",
+})
+
+jTlb
+.add({
+  targets: '.alphabet-j-right',
+  rotate: -110,
+  duration: 400
+})
+.add({
+  targets: '.alphabet-j-right',
+  rotate: 0,
+  duration: 400
+})
+
+var jCircle = document.getElementById('jOval');
+jCircle.setAttribute('x', 100);
+
+
+
 
 // // Wrap every letter in a span
 // $('.ml2').each(function(){

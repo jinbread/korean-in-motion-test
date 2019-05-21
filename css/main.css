@@ -200,7 +200,18 @@ canvas {
     rotate: 90;
 }
 
+.j {
+    background-color: #F75497;
 
+}
+
+.alphabet-j-oval {
+    mix-blend-mode: difference;
+}
+
+.alphabet-j-left, .alphabet-j-right  {
+    transform-origin: 50% 55%;
+}
 
 .w {
     background-color: #00FF4E;
