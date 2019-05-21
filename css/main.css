@@ -209,7 +209,7 @@ canvas {
     mix-blend-mode: difference;
 }
 
-.alphabet-j-left, .alphabet-j-right  {
+.alphabet-j-left, .alphabet-j-right, .alphabet-j-oval  {
     transform-origin: 50% 55%;
 }
 

@@ -490,11 +490,48 @@ jTlb
   duration: 400
 })
 
-var jCircle = document.getElementById('jOval');
-jCircle.setAttribute('x', 100);
+jTlo = anime.timeline({
+  loop: true,
+  easing: "easeInOutExpo",
+})
 
-
-
+jTlo
+.add({
+  targets: '.alphabet-j-oval',
+  translateX: -190,
+  translateY: 40,
+  duration: 400,
+})
+.add({
+  targets: '.alphabet-j-oval',
+  translateX: -40,
+  translateY: 100,
+  duration: 400,
+})
+.add({
+  targets: '.alphabet-j-oval',
+  translateX: -180,
+  translateY: 180,
+  duration: 400,
+})
+.add({
+  targets: '.alphabet-j-oval',
+  translateX: -10,
+  translateY: 160,
+  duration: 400,
+})
+.add({
+  targets: '.alphabet-j-oval',
+  translateX: -80,
+  translateY: 10,
+  duration: 400,
+})
+.add({
+  targets: '.alphabet-j-oval',
+  translateX: 0,
+  translateY: 0,
+  duration: 400,
+})
 
 // // Wrap every letter in a span
 // $('.ml2').each(function(){
