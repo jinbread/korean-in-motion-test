@@ -292,21 +292,6 @@ var sketchv = function(p) {
     p.pgA = p.createGraphics(200, 13);
     p.pgB = p.createGraphics(200, 13);
 
-  }
-
-  p.draw = function() {
-    p.background(254, 100, 54);
-    
-
-  for(var i = 0; i < 14; i++){
-    p.push();
-    // p.rotateZ(p.frameCount * 0.01);
-    // p.rotateX(p.frameCount * 0.01);
-    p.translate(0, i*13 - 85, 0);
-    p.rotateY(p.x*i);
-    p.normalMaterial();
-    p.smooth();
-
     p.pgA.background(254, 100, 54);
     p.pgA.noStroke();
     p.pgA.fill(0);
@@ -317,9 +302,21 @@ var sketchv = function(p) {
     p.pgB.fill(0);
     p.pgB.rect(142, 0, 48, 13); 
 
-    // if(i < 3) {
-    //   p.texture(p.pg)
-    // }
+  }
+
+  p.draw = function() {
+    p.background(254, 100, 54);
+    
+  for(var i = 0; i < 14; i++){
+    p.push();
+    // p.rotateZ(p.frameCount * 0.01);
+    // p.rotateX(p.frameCount * 0.01);
+    p.translate(0, i*13 - 85, 0);
+    p.rotateY(p.x*i);
+    p.normalMaterial();
+    p.smooth();
+
+
     if(i>5 && i<9 || i < 3) {
       p.texture(p.pgA);
     } else {
@@ -331,7 +328,7 @@ var sketchv = function(p) {
   }
 
   
-  if(p.frameCount % 360 > 0) {
+  if(p.frameCount % 135 > 0) {
     p.direction *= 1;
   } else {
     p.direction *= -1;
