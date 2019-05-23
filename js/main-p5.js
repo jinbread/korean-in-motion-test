@@ -307,35 +307,45 @@ var sketchv = function(p) {
   p.draw = function() {
     p.background(254, 100, 54);
     
-  for(var i = 0; i < 14; i++){
-    p.push();
-    // p.rotateZ(p.frameCount * 0.01);
-    // p.rotateX(p.frameCount * 0.01);
-    p.translate(0, i*13 - 85, 0);
-    p.rotateY(p.x*i);
-    p.normalMaterial();
-    p.smooth();
+    for(var i = 0; i < 14; i++){
+      p.push();
+      // p.rotateZ(p.frameCount * 0.01);
+      // p.rotateX(p.frameCount * 0.01);
+      p.translate(0, i*13 - 85, 0);
+      p.angleMode(p.DEGREES);
+      if(p.millis() > 200 * i) {
+        p.rotateY(p.x);
+      }
+
+      p.normalMaterial();
+      p.smooth();
 
 
-    if(i>5 && i<9 || i < 3) {
-      p.texture(p.pgA);
-    } else {
-      p.texture(p.pgB);
+      if(i>5 && i<9 || i < 3) {
+        p.texture(p.pgA);
+      } else {
+        p.texture(p.pgB);
+      }
+
+      p.box(200, 13, 200);
+      p.pop();		
     }
 
-    p.box(200, 13, 200);
-    p.pop();		
-  }
 
-  
-  if(p.frameCount % 135 > 0) {
-    p.direction *= 1;
-  } else {
-    p.direction *= -1;
-  }
+    
+    if(p.frameCount % 180 > 0) {
+      p.direction *= 1;
+    } else {
+      p.direction *= -1;
+    }
 
-  p.x += p.direction * 0.001
-}
+    if(p.x < 90){
+      p.x += p.direction * 0.5;
+    } else {
+      p.x = 90;
+    }
+
+  }
 }
 
 new p5(sketchv, 'svg-content-v');
