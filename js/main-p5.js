@@ -314,12 +314,12 @@ var sketchv = function(p) {
       p.texture(p.imgB);
     }
 
-    p.box(180, 13, 180);
+    p.box(200, 13, 200);
     p.pop();		
   }
 
   
-  if(p.frameCount % 180 > 0) {
+  if(p.frameCount % 360 > 0) {
     p.direction *= 1;
   } else {
     p.direction *= -1;
