@@ -280,25 +280,41 @@ new p5(sketchx, 'svg-content-x');
 var sketchv = function(p) {
   p.x = 0;
   p.direction = 1;
+  p.imgA;
+  p.imgB;
   
   p.setup = function() {
     p.createCanvas(300, 300, p.WEBGL)
     p.ortho();
+    // p.perspective(Math.PI / 3.0, p.width / p.height, 0.1, 500);
+    p.imgA = p.loadImage('asset/ka.png');
+    p.imgB = p.loadImage('asset/kb.png');
+    // pg = p.createGraphics(200, 20);
 
   }
 
   p.draw = function() {
-    p.background(255);
+    p.background(254, 100, 54);
+    
 
-  for(var i = 0; i < 10; i++){
+  for(var i = 0; i < 14; i++){
     p.push();
     // p.rotateZ(p.frameCount * 0.01);
     // p.rotateX(p.frameCount * 0.01);
-    p.translate(0, i*20 - 90, 0);
+    p.translate(0, i*13 - 85, 0);
     p.rotateY(p.x*i);
     p.normalMaterial();
     p.smooth();
-    p.box(200, 20, 200);
+    // if(i < 3) {
+    //   p.texture(p.pg)
+    // }
+    if(i>5 && i<9 || i < 3) {
+      p.texture(p.imgA);
+    } else {
+      p.texture(p.imgB);
+    }
+
+    p.box(180, 13, 180);
     p.pop();		
   }
 

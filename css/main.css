@@ -213,6 +213,10 @@ canvas {
     transform-origin: 50% 55%;
 }
 
+.v {
+    background-color: #FE6436;    
+}
+
 .w {
     background-color: #00FF4E;
 }
