@@ -321,11 +321,11 @@ var sketchv = function(p) {
       p.smooth();
 
 
-      if(i>5 && i<9 || i < 3) {
-        p.texture(p.pgA);
-      } else {
-        p.texture(p.pgB);
-      }
+      // if(i>5 && i<9 || i < 3) {
+      //   p.texture(p.pgA);
+      // } else {
+      //   p.texture(p.pgB);
+      // }
 
       p.box(200, 13, 200);
       p.pop();		
