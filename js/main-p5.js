@@ -287,9 +287,10 @@ var sketchv = function(p) {
     p.createCanvas(300, 300, p.WEBGL)
     p.ortho();
     // p.perspective(Math.PI / 3.0, p.width / p.height, 0.1, 500);
-    p.imgA = p.loadImage('asset/ka.png');
-    p.imgB = p.loadImage('asset/kb.png');
-    // pg = p.createGraphics(200, 20);
+    // p.imgA = p.loadImage('asset/ka.png');
+    // p.imgB = p.loadImage('asset/kb.png');
+    p.pgA = p.createGraphics(200, 13);
+    p.pgB = p.createGraphics(200, 13);
 
   }
 
@@ -305,13 +306,24 @@ var sketchv = function(p) {
     p.rotateY(p.x*i);
     p.normalMaterial();
     p.smooth();
+
+    p.pgA.background(254, 100, 54);
+    p.pgA.noStroke();
+    p.pgA.fill(0);
+    p.pgA.rect(10, 0, 180, 13); 
+    
+    p.pgB.background(254, 100, 54);
+    p.pgB.noStroke();
+    p.pgB.fill(0);
+    p.pgB.rect(142, 0, 48, 13); 
+
     // if(i < 3) {
     //   p.texture(p.pg)
     // }
     if(i>5 && i<9 || i < 3) {
-      p.texture(p.imgA);
+      p.texture(p.pgA);
     } else {
-      p.texture(p.imgB);
+      p.texture(p.pgB);
     }
 
     p.box(200, 13, 200);
