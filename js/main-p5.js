@@ -313,9 +313,10 @@ var sketchv = function(p) {
       // p.rotateX(p.frameCount * 0.01);
       p.translate(0, i*13 - 85, 0);
       p.angleMode(p.DEGREES);
-      if(p.millis() > 200 * i) {
-        p.rotateY(p.x);
-      }
+      p.rotateY(p.x*i);
+      // if(p.millis() > 200 * i) {
+        
+      // }
 
       p.normalMaterial();
       p.smooth();
@@ -340,7 +341,7 @@ var sketchv = function(p) {
     }
 
     if(p.x < 90){
-      p.x += p.direction * 0.5;
+      p.x += p.direction * 0.05;
     } else {
       p.x = 90;
     }
