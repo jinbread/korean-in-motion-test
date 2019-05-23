@@ -318,23 +318,23 @@ var sketchv = function(p) {
         
       // }
 
-      p.normalMaterial();
+      // p.normalMaterial();
       p.smooth();
 
 
-      // if(i>5 && i<9 || i < 3) {
-      //   p.texture(p.pgA);
-      // } else {
-      //   p.texture(p.pgB);
-      // }
-
+      if(i>5 && i<9 || i < 3) {
+        p.texture(p.pgA);
+      } else {
+        p.texture(p.pgB);
+      }
+      p.noStroke();
       p.box(200, 13, 200);
       p.pop();		
     }
 
 
     
-    if(p.frameCount % 180 > 0) {
+    if(p.frameCount % 140 > 0) {
       p.direction *= 1;
     } else {
       p.direction *= -1;
