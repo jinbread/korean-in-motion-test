@@ -278,10 +278,9 @@ new p5(sketchx, 'svg-content-x');
 
 
 var sketchv = function(p) {
-  p.x = 0;
-  p.direction = 1;
-  p.imgA;
-  p.imgB;
+  var x = 0;
+  var direction = 1;
+  
   
   p.setup = function() {
     p.createCanvas(300, 300, p.WEBGL)
@@ -313,13 +312,13 @@ var sketchv = function(p) {
       // p.rotateX(p.frameCount * 0.01);
       p.translate(0, i*13 - 85, 0);
       p.angleMode(p.DEGREES);
-      p.rotateY(p.x*i);
+      p.rotateY(x*i);
       // if(p.millis() > 200 * i) {
         
       // }
 
       // p.normalMaterial();
-      p.smooth();
+      // p.smooth();
 
 
       if(i>5 && i<9 || i < 3) {
@@ -335,15 +334,15 @@ var sketchv = function(p) {
 
     
     if(p.frameCount % 140 > 0) {
-      p.direction *= 1;
+      direction *= 1;
     } else {
-      p.direction *= -1;
+      direction *= -1;
     }
 
-    if(p.x < 90){
-      p.x += p.direction * 0.05;
+    if(x < 90){
+      x += direction * 0.05;
     } else {
-      p.x = 90;
+      x = 90;
     }
 
   }
