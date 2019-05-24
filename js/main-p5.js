@@ -284,8 +284,8 @@ var sketchv = function(p) {
   
   p.setup = function() {
     p.createCanvas(300, 300, p.WEBGL)
-    p.ortho();
-    // p.perspective(Math.PI / 3.0, p.width / p.height, 0.1, 500);
+    // p.ortho();
+    p.perspective(Math.PI / 2.4, 1, 0.1, 300);
     // p.imgA = p.loadImage('asset/ka.png');
     // p.imgB = p.loadImage('asset/kb.png');
     p.pgA = p.createGraphics(200, 13);
