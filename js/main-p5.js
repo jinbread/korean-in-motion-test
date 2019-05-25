@@ -241,112 +241,38 @@ var sketchd = function(p) {
   new p5(sketche, 'svg-content-e');
   
   
-  var sketchx = function(p) {
-    p.x = 0;
+//   var sketchx = function(p) {
+//     p.x = 0;
     
-    p.setup = function() {
-      p.createCanvas(300, 300, p.WEBGL)
-      p.ortho();
+//     p.setup = function() {
+//       p.createCanvas(300, 300, p.WEBGL)
+//       p.ortho();
 
-    }
+//     }
 
-    p.draw = function() {
-      p.background(44, 44, 44);
+//     p.draw = function() {
+//       p.background(44, 44, 44);
 	
-    for(var i = 0; i < 10; i++){
-      p.push();
-      // p.rotateZ(p.frameCount * 0.01);
-      // p.rotateX(p.frameCount * 0.01);
-      p.translate(0, i*15 - 67.5, 0);
-      p.rotateY(p.x*i);
-      p.normalMaterial();
-      p.smooth();
-      p.box(150, 15, 150);
-      p.pop();		
-    }
-
-    
-    if(p.mouseIsPressed) {
-      p.x = p.x+0.001;
-    } else {
-      p.x = p.x - 0.001;  	
-    }
-  }
-}
-
-new p5(sketchx, 'svg-content-x');
-
-
-// var sketchv = function(p) {
-//   p.x = 0;
-//   p.direction = 1;
-//   p.imgA;
-//   p.imgB;
-  
-//   p.setup = function() {
-//     p.createCanvas(300, 300, p.WEBGL)
-//     p.ortho();
-//     // p.perspective(Math.PI / 3.0, p.width / p.height, 0.1, 500);
-//     // p.imgA = p.loadImage('asset/ka.png');
-//     // p.imgB = p.loadImage('asset/kb.png');
-//     p.pgA = p.createGraphics(200, 13);
-//     p.pgB = p.createGraphics(200, 13);
-
-//     p.pgA.background(254, 100, 54);
-//     p.pgA.noStroke();
-//     p.pgA.fill(0);
-//     p.pgA.rect(10, 0, 180, 13); 
-    
-//     p.pgB.background(254, 100, 54);
-//     p.pgB.noStroke();
-//     p.pgB.fill(0);
-//     p.pgB.rect(142, 0, 48, 13); 
-
-//   }
-
-//   p.draw = function() {
-//     p.background(254, 100, 54);
-    
-//     for(var i = 0; i < 14; i++){
+//     for(var i = 0; i < 10; i++){
 //       p.push();
 //       // p.rotateZ(p.frameCount * 0.01);
 //       // p.rotateX(p.frameCount * 0.01);
-//       p.translate(0, i*13 - 85, 0);
-//       p.angleMode(p.DEGREES);
+//       p.translate(0, i*15 - 67.5, 0);
 //       p.rotateY(p.x*i);
-//       // if(p.millis() > 200 * i) {
-        
-//       // }
-
-//       // p.normalMaterial();
+//       p.normalMaterial();
 //       p.smooth();
-
-
-//       if(i>5 && i<9 || i < 3) {
-//         p.texture(p.pgA);
-//       } else {
-//         p.texture(p.pgB);
-//       }
-//       p.noStroke();
-//       p.box(200, 13, 200);
+//       p.box(150, 15, 150);
 //       p.pop();		
 //     }
 
-
     
-//     if(p.frameCount % 140 > 0) {
-//       p.direction *= 1;
+//     if(p.mouseIsPressed) {
+//       p.x = p.x+0.001;
 //     } else {
-//       p.direction *= -1;
+//       p.x = p.x - 0.001;  	
 //     }
-
-//     if(p.x < 90){
-//       p.x += p.direction * 0.05;
-//     } else {
-//       p.x = 90;
-//     }
-
 //   }
 // }
 
-// new p5(sketchv, 'svg-content-v');
+// new p5(sketchx, 'svg-content-x');
+
