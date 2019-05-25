@@ -533,6 +533,24 @@ jTlo
   duration: 400,
 })
 
+var vTl = anime.timeline({
+  easing: 'easeInOutExpo',
+  loop: true
+})
+
+vTl
+.add({
+  targets: '.cube',
+  rotateY: 90,
+  delay: anime.stagger(100),
+})
+.add({
+  targets: '.cube',
+  rotateY: 0,
+  delay: anime.stagger(100)
+})
+
+
 // // Wrap every letter in a span
 // $('.ml2').each(function(){
 //     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
