@@ -310,7 +310,7 @@ footer {
   height: 300px;
   /* border: 1px solid #CCC; */
   /* margin: 80px; */
-  perspective: 1500px;
+  perspective: 900px;
 }
 
 .cube {

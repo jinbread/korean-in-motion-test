@@ -534,20 +534,21 @@ jTlo
 })
 
 var vTl = anime.timeline({
-  easing: 'easeInOutExpo',
-  loop: true
+  easing: 'linear',
+  loop: true,
+  delay: 200,
 })
 
 vTl
 .add({
   targets: '.cube',
   rotateY: 90,
-  delay: anime.stagger(100),
+  delay: anime.stagger(200),
 })
 .add({
   targets: '.cube',
   rotateY: 0,
-  delay: anime.stagger(100)
+  delay: anime.stagger(200)
 })
 
 
