@@ -206,6 +206,10 @@ canvas {
 
 }
 
+.m {
+    background-color: #0A00D6;
+}
+
 .alphabet-j-oval {
     mix-blend-mode: difference;
 }
@@ -220,7 +224,7 @@ canvas {
 }
 
 .w {
-    background-color: #00FF4E;
+    background-color: #7EF3E2;
 }
 
 .y {
@@ -357,3 +361,21 @@ footer {
     width: 300px;
     height: 300px;
   }
+
+.path-m-left { animation: dash 10s linear infinite alternate-reverse;}
+.path-m-right { animation: dash 10s linear infinite alternate; }
+
+.left-1 { stroke-dasharray: 36, 99;}
+.left-2 { stroke-dasharray: 36, 179;}
+.left-3 { stroke-dasharray: 36, 404;}
+.right-1 { stroke-dasharray: 36, 139;}
+.right-2 { stroke-dasharray: 36, 364;}
+.right-3 { stroke-dasharray: 36, 444;}
+
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
