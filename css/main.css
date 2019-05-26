@@ -365,12 +365,12 @@ footer {
 .path-m-left { animation: dash 10s linear infinite alternate-reverse;}
 .path-m-right { animation: dash 10s linear infinite alternate; }
 
-.left-1 { stroke-dasharray: 36, 99;}
-.left-2 { stroke-dasharray: 36, 179;}
-.left-3 { stroke-dasharray: 36, 404;}
-.right-1 { stroke-dasharray: 36, 139;}
-.right-2 { stroke-dasharray: 36, 364;}
-.right-3 { stroke-dasharray: 36, 444;}
+.left-1 { stroke-dasharray: 36, 99; stroke-linecap: square;}
+.left-2 { stroke-dasharray: 36, 179;stroke-linecap: square;}
+.left-3 { stroke-dasharray: 36, 404;stroke-linecap: square;}
+.right-1 { stroke-dasharray: 36, 139;stroke-linecap: square;}
+.right-2 { stroke-dasharray: 36, 364;stroke-linecap: square;}
+.right-3 { stroke-dasharray: 36, 444;stroke-linecap: square;}
 
 
 
