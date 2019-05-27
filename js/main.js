@@ -359,6 +359,77 @@ anime({
   delay: anime.stagger(100),
 })
 
+lTl = anime.timeline({
+  easing: 'easeOutExpo',
+  loop: true,    
+})
+
+lTl
+.add({
+  targets: '#alphabet-l-1',
+  translateX: -42,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: 42,
+  delay: 800
+})
+.add({
+  targets: '#alphabet-l-2',
+  translateX: +42,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: -42,
+  delay: 800
+})
+.add({
+  targets: '#alphabet-l-3',
+  translateX: -42,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: -42,
+  delay: 800
+})
+.add({
+  targets: '#alphabet-l-4',
+  translateX: 42,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: 42,
+  delay: 800
+})
+.add({
+  targets: '#alphabet-l-4',
+  translateX: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: 0,
+  delay: 800
+})
+.add({
+  targets: '#alphabet-l-3',
+  translateX: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: 0,
+  delay: 800
+})
+.add({
+  targets: '#alphabet-l-2',
+  translateX: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: 0,
+  delay: 800
+})
+.add({
+  targets: '#alphabet-l-1',
+  translateX: 0,
+  duration: 200,
+  easing: 'easeOutExpo',
+  translateY: 0,
+  delay: 800
+})
+
 wTl = anime.timeline({
   easing: 'easeOutExpo',
   loop: true,  
