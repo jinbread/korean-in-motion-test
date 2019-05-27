@@ -3,7 +3,7 @@ var Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
     Body = Matter.Body,
-    SVG = Matter.Svg,
+    Constraint = Matter.Constraint,
     Mouse = Matter.Mouse,
     MouseConstraint = Matter.MouseConstraint,
     Events = Matter.Events,
@@ -24,21 +24,80 @@ var render = Render.create({
         wireframes: false,
         pixelRatio: 'auto',
         background: 'white',
+        
+        
         // showAngleIndicator: true,
     }  
 });
 
 // create two boxes and a ground
-var boxA = Bodies.circle(150, 200, 70);
+var boxA = Bodies.circle(150, 200, 70, {
+    render: {
+        fillStyle: '#FF2C55'
+    }
+});
 var boxB = Bodies.circle(150, 200, 30, {
     render: {
         fillStyle: '#FFFFFF'
     }
 });
-var boxC = Bodies.rectangle(150, 90, 200, 39);
-var boxD = Bodies.rectangle(150, 55, 48, 32);
+var boxC1 = Bodies.rectangle(142, 90, 108, 40, {
+    render: {
+        fillStyle: '#FF2C55'
+    }
+});
+
+var boxC2 = Bodies.rectangle(212, 90, 52, 40, {
+    render: {
+        fillStyle: '#24D6FF'
+    }
+});
+
+var boxC = Body.create({
+    parts: [boxC1, boxC2]
+})
+
+var boxD = Bodies.rectangle(150, 55, 48, 32, {
+    render: {
+        fillStyle: '#00D1A9'
+    }
+});
+
+var constraintC = Constraint.create({
+    pointA: {x: 150, y: 90},
+    bodyB: boxC,
+    length: 2,
+    stiffness: 0.05,
+    damping: 0.001,
+    render: {
+        visible: false
+    }
+})
+
+var constraintD = Constraint.create({
+    pointA: {x: 150, y: 55},
+    bodyB: boxD,
+    length: 0,
+    stiffness: 0.005,
+    damping: 0.01,
+    render: {
+        visible: false
+    }
+})
+
 var circleChar = Body.create({
     parts: [boxA, boxB]
+})
+
+var constraintCircle = Constraint.create({
+    pointA: {x:150, y:200},
+    bodyB: circleChar,
+    length: 0,
+    stiffness: 0.001,
+    damping: 0.01,
+    render: {
+        visible: false
+    }
 })
 // var compound = Body.create({
 //     parts: [boxC, boxD],
@@ -49,7 +108,10 @@ var circleChar = Body.create({
 
 
 // add all of the bodies to the world
-World.add(engine.world, [circleChar, boxC, boxD]);
+World.add(engine.world, [circleChar, constraintCircle, boxD, constraintD]);
+
+World.add(engine.world, [boxC, constraintC]);
+
 
 World.add(engine.world, [
     // walls
@@ -58,20 +120,24 @@ World.add(engine.world, [
         isStatic: true,
         render: { fillStyle: 'transparent' }
      }),
-    Bodies.rectangle(300, 150, 40, 300, { isStatic: true,
+    Bodies.rectangle(300, 150, 70, 300, { isStatic: true,
         render: { fillStyle: 'transparent' } }),
-    Bodies.rectangle(0, 150, 40, 300, { isStatic: true,
+    Bodies.rectangle(0, 150, 70, 300, { isStatic: true,
         render: { fillStyle: 'transparent' } })
 ]);
 
 var counter = 0;
+var moveX = 5;
 
 Events.on(engine, 'beforeUpdate', function(event) {
     counter += 1;
 
-    if (counter >= 60 * 2) {
+    if (counter >= 60) {
         
-        Body.setVelocity(circleChar, { x: 0, y: -10 });
+        Body.setVelocity(circleChar, { x: moveX, y: -7 });
+        
+        moveX = moveX * -1
+
         counter = 0;
     }
 });
@@ -82,7 +148,7 @@ var mouse = Mouse.create(render.canvas),
     mouseConstraint = MouseConstraint.create(engine, {
         mouse: mouse,
         constraint: {
-            stiffness: 1.2,
+            stiffness: 0.2,
             render: {
                 visible: false
             }
