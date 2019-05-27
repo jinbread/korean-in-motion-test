@@ -525,10 +525,73 @@ vTl
   delay: anime.stagger(200)
 })
 
+anime({
+  targets: "#alphabet-i-1",
+  rotate: -360,
+  loop: true,
+  delay: 500,
+  duration: 2500
+})
 
+anime({
+  targets: "#alphabet-i-2",
+  rotate: 360,
+  loop: true,
+  delay: 500,
+  duration: 2500
+})
 
+anime({
+  targets: "#alphabet-i-3",
+  rotate: 360,
+  loop: true,
+  delay: 500,
+  duration: 2500
+})
 
+anime({
+  targets: "#alphabet-i-4",
+  rotate: -360,
+  loop: true,
+  delay: 500,
+  duration: 2500
+})
 
+anime({
+  targets: "#alphabet-i-6",
+  rotate: 360,
+  loop: true,
+  delay: 500,
+  duration: 2500
+})
+
+anime({
+  targets: "#alphabet-i-5",
+  rotate: 360,
+  loop: true,
+  delay: 500,
+  duration: 2500
+})
+
+var iTl = anime.timeline({
+  loop: true,
+  delay: 500,
+  duration: 2500
+})
+
+iTl
+.add({
+  targets: "#alphabet-i",
+  scale: 1,
+})
+.add({
+  targets: "#alphabet-i",
+  scale: 2,
+})
+.add({
+  targets: "#alphabet-i",
+  scale: 1,
+})
 
 // p5.js script
 // p5.js script
