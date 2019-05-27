@@ -201,6 +201,10 @@ canvas {
     rotate: 90;
 }
 
+.i {
+    background-color: #FDFFE1;
+}
+
 .j {
     background-color: #F75497;
 
@@ -208,6 +212,10 @@ canvas {
 
 .m {
     background-color: #0A00D6;
+}
+
+.n {
+    background-color: #fff;
 }
 
 .alphabet-j-oval {
