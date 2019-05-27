@@ -4,6 +4,8 @@ var Engine = Matter.Engine,
     World = Matter.World,
     Body = Matter.Body,
     SVG = Matter.Svg,
+    Mouse = Matter.Mouse,
+    MouseConstraint = Matter.MouseConstraint,
     Events = Matter.Events,
     Common = Matter.Common
     Bodies = Matter.Bodies;
@@ -22,7 +24,7 @@ var render = Render.create({
         wireframes: false,
         pixelRatio: 'auto',
         background: 'white',
-        showAngleIndicator: true,
+        // showAngleIndicator: true,
     }  
 });
 
@@ -33,25 +35,25 @@ var boxB = Bodies.circle(150, 200, 30, {
         fillStyle: '#FFFFFF'
     }
 });
-var boxC = Bodies.rectangle(150, 90, 186, 39);
+var boxC = Bodies.rectangle(150, 90, 200, 39);
 var boxD = Bodies.rectangle(150, 55, 48, 32);
 var circleChar = Body.create({
     parts: [boxA, boxB]
 })
-var compound = Body.create({
-    parts: [boxC, boxD],
-    isStatic: true
-})
+// var compound = Body.create({
+//     parts: [boxC, boxD],
+//     isStatic: false
+// })
 
 
 
 
 // add all of the bodies to the world
-World.add(engine.world, [circleChar, compound]);
+World.add(engine.world, [circleChar, boxC, boxD]);
 
 World.add(engine.world, [
     // walls
-    Bodies.rectangle(150, 0, 300, 1, { isStatic: true }),
+    Bodies.rectangle(150, 0, 300, 40, { isStatic: true, render: { fillStyle: 'transparent' } }),
     Bodies.rectangle(150, 300, 300, 60, { 
         isStatic: true,
         render: { fillStyle: 'transparent' }
@@ -67,36 +69,30 @@ var counter = 0;
 Events.on(engine, 'beforeUpdate', function(event) {
     counter += 1;
 
-    var py = 80 + 10 * Math.sin(engine.timing.timestamp * 0.004);
-    Body.setVelocity(compound, { x: 0, y: py - compound.position.y });
-    Body.setPosition(compound, { x: 150, y: py });
-
-    if (counter >= 60 * 1.5) {
-        Body.setVelocity(circleChar, { x: 0, y: -7 });
+    if (counter >= 60 * 2) {
+        
+        Body.setVelocity(circleChar, { x: 0, y: -10 });
         counter = 0;
     }
 });
 
-var updateGravity = function(event) {
-    var orientation = typeof window.orientation !== 'undefined' ? window.orientation : 0,
-        gravity = engine.world.gravity;
 
-    if (orientation === 0) {
-        gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
-        gravity.y = Common.clamp(event.beta, -90, 90) / 90;
-    } else if (orientation === 180) {
-        gravity.x = Common.clamp(event.gamma, -90, 90) / 90;
-        gravity.y = Common.clamp(-event.beta, -90, 90) / 90;
-    } else if (orientation === 90) {
-        gravity.x = Common.clamp(event.beta, -90, 90) / 90;
-        gravity.y = Common.clamp(-event.gamma, -90, 90) / 90;
-    } else if (orientation === -90) {
-        gravity.x = Common.clamp(-event.beta, -90, 90) / 90;
-        gravity.y = Common.clamp(event.gamma, -90, 90) / 90;
-    }
-};
+// add mouse control
+var mouse = Mouse.create(render.canvas),
+    mouseConstraint = MouseConstraint.create(engine, {
+        mouse: mouse,
+        constraint: {
+            stiffness: 1.2,
+            render: {
+                visible: false
+            }
+        }
+    });
 
-window.addEventListener('deviceorientation', updateGravity);
+World.add(engine.world, mouseConstraint);
+
+// keep the mouse in sync with rendering
+render.mouse = mouse;
 
 
 // run the engine
@@ -104,5 +100,3 @@ Engine.run(engine);
 
 // run the renderer
 Render.run(render);
-
-console.log(circleChar.position)
