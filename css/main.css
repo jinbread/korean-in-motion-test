@@ -80,6 +80,7 @@ p {
 .content {
     display: block;
     margin-top: 50px;
+    text-align: center;
 }
 
 .color-svg { color: #b500f1; }/* lavender: */
@@ -92,46 +93,6 @@ p {
 
 }
 
-.ml2 {
-  font-weight: 900;
-  font-size: 3.5em;
-  text-align: center;
-  color: rgb(247, 226, 35);
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-  
-.ml2 .letter {
-    display: inline-block;
-    line-height: 1em;
-}
-
-.ml6 {
-    position: relative;
-    font-weight: 900;
-    font-size: 3.3em;
-    text-align: center;
-    color: rgb(41, 252, 46);
-    margin-top: 50px;
-    margin-bottom: 50px;
-    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: rgb(41, 252, 46);
-}
-  
-.ml6 .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.2em;
-    padding-right: 0.05em;
-    padding-bottom: 0.1em;
-    overflow: hidden;
-}
-  
-.ml6 .letter {
-    display: inline-block;
-    line-height: 1em;
-}
 
 .blotter-container {
     text-align: center;
@@ -149,6 +110,7 @@ p {
     margin-top: 25px;
     margin-bottom: 25px;
     max-width: 1100px;
+    text-align: left
     /* display: grid;
     grid-template-columns: 350px 350px 350px;
     justify-items: center; */
@@ -429,3 +391,9 @@ footer {
     width: 300px;
     height: 300px;
 }
+
+@media only screen and (max-width: 1058px) {
+    .svg-container {
+      text-align: center;
+    }
+  }
