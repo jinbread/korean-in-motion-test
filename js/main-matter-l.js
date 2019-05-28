@@ -64,7 +64,7 @@ var constraintOptions = {
     render: { visible: false } 
 };
 
-var alphabetL = Composites.softBody(50, 50, 5, 5, 4, 4, false, 22, particleOptions, constraintOptions)
+var alphabetL = Composites.softBody(50, 50, 5, 5, 4, 4, false, 21, particleOptions, constraintOptions)
 
 alphabetL.bodies["6"].render.fillStyle = "transparent"
 alphabetL.bodies["7"].render.fillStyle = "transparent"
