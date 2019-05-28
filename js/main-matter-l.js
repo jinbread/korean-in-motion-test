@@ -14,8 +14,8 @@ var Engine = Matter.Engine,
 // create an engine
 var engine = Engine.create();
 
-var gravityX = 0.1;
-var gravityY = 0.1;
+var gravityX = 0.5;
+var gravityY = 0.5;
 
 function changeGravity() {
     if(gravityX*gravityY > 0){
@@ -64,7 +64,7 @@ var constraintOptions = {
     render: { visible: false } 
 };
 
-var alphabetL = Composites.softBody(50, 50, 5, 5, 0, 0, false, 20, particleOptions, constraintOptions)
+var alphabetL = Composites.softBody(50, 50, 5, 5, 0, 0, false, 23, particleOptions, constraintOptions)
 
 alphabetL.bodies["6"].render.fillStyle = "transparent"
 alphabetL.bodies["7"].render.fillStyle = "transparent"
@@ -75,7 +75,7 @@ alphabetL.bodies["17"].render.fillStyle = "transparent"
 alphabetL.bodies["18"].render.fillStyle = "transparent"
 alphabetL.bodies["19"].render.fillStyle = "transparent"
 
-
+console.log(alphabetL);
 
 
 World.add(engine.world, [alphabetL]);
@@ -83,10 +83,10 @@ World.add(engine.world, [alphabetL]);
 // create two boxes and a ground
 World.add(engine.world, [
     // walls
-    Bodies.rectangle(150, 0, 300, 20, { isStatic: true, render: {fillStyle: 'transparent'} }),
-    Bodies.rectangle(150, 300, 300, 20, { isStatic: true, render: {fillStyle: 'transparent'} }),
-    Bodies.rectangle(300, 150, 20, 300, { isStatic: true, render: {fillStyle: 'transparent'} }),
-    Bodies.rectangle(0, 150, 20, 300, { isStatic: true, render: {fillStyle: 'transparent'} })
+    Bodies.rectangle(150, 0, 300, 40, { isStatic: true, render: {fillStyle: 'transparent'} }),
+    Bodies.rectangle(150, 300, 300, 40, { isStatic: true, render: {fillStyle: 'transparent'} }),
+    Bodies.rectangle(300, 150, 40, 300, { isStatic: true, render: {fillStyle: 'transparent'} }),
+    Bodies.rectangle(0, 150, 40, 300, { isStatic: true, render: {fillStyle: 'transparent'} })
 ]);
 
 var mouse = Mouse.create(render.canvas),
