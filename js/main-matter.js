@@ -43,7 +43,7 @@ var boxB = Bodies.circle(150, 200, 30, {
 });
 var boxC1 = Bodies.rectangle(142, 90, 108, 40, {
     render: {
-        fillStyle: '#FF2C55'
+        fillStyle: '#24D6FF'
     }
 });
 
