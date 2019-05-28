@@ -431,7 +431,8 @@ a:link {
   /* mouse over link */
   a:hover {
     color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
+    opacity: 0.4;
   }
   
   /* selected link */
