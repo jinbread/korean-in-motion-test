@@ -120,6 +120,8 @@ p {
 }
 
 .svg-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 25px;
     margin-bottom: 25px;
     max-width: 1100px;
@@ -286,6 +288,7 @@ canvas {
 
 footer {
     margin-bottom: 80px;
+    text-align: center;
 }
 
 #korean-c {
@@ -408,12 +411,19 @@ footer {
 @media only screen and (max-width: 1058px) {
     .svg-container {
       text-align: center;
+      grid-template-columns: 1fr 1fr;
     }
     .content {
         margin-bottom: 0px;
         margin-top: 60px;
     }
   }
+
+@media only screen and (max-width: 720px) {
+    .svg-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 
   /* unvisited link */
