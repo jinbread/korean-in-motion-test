@@ -868,7 +868,7 @@ var sketche = function(p) {
 
   p.setup = function(){
     p.createCanvas(300, 300);
-    p.background(66, 0, 247);
+    p.background(0, 229, 119);
     //noStroke();
     p.frameRate(10);
     // Set the starting position of the shape
@@ -882,7 +882,7 @@ var sketche = function(p) {
     p.ypos = p.ypos + p.yspeed * p.ydirection;
     // console.log(p.millis());
     if (p.millis() % 10000 > 0 && p.millis() % 10000 < 200 ) {
-      p.background(66, 0, 247);
+      p.background(0, 229, 119);
     }
     // Test to see if the shape exceeds the boundaries of the screen
     // If it does, reverse its direction by multiplying by -1
@@ -899,12 +899,12 @@ var sketche = function(p) {
     p.rect(p.xpos, p.ypos, p.rad, p.rad);
     
     p.noFill();
-    p.strokeWeight(1);
+    p.strokeWeight(1.7);
     p.stroke(0);
     p.rect(p.xpos+(p.sWeight/2), p.ypos+(p.sWeight/2), p.rad-p.sWeight, p.rad-p.sWeight);
 
     p.noFill();
-    p.strokeWeight(1);
+    p.strokeWeight(1.7);
     p.stroke(0);
     p.rect(p.xpos-(p.sWeight/2), p.ypos-(p.sWeight/2), p.rad+p.sWeight, p.rad+p.sWeight);
   }

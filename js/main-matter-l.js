@@ -54,7 +54,7 @@ var particleOptions = {
     frictionStatic: 0.01,
     render: { 
         visible: true,
-        fillStyle: '#000000'
+        fillStyle: '#28293F'
     } 
 };
 
